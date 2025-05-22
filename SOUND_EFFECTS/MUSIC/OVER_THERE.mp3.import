@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/OVER_THERE.mp3-4938da689f4061bebaf16763d9b98002.mp3str"
+
+[deps]
+
+source_file="res://SOUND_EFFECTS/MUSIC/OVER_THERE.mp3"
+dest_files=[ "res://.import/OVER_THERE.mp3-4938da689f4061bebaf16763d9b98002.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

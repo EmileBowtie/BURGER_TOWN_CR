@@ -1,0 +1,1745 @@
+[gd_scene load_steps=65 format=2]
+
+[ext_resource path="res://SidewalkPicture.png" type="Texture" id=2]
+[ext_resource path="res://Idle.png" type="Texture" id=3]
+[ext_resource path="res://Diner.png" type="Texture" id=4]
+[ext_resource path="res://Cliff.png" type="Texture" id=5]
+[ext_resource path="res://FoodTruck.png" type="Texture" id=6]
+[ext_resource path="res://SkyscraperPicture.png" type="Texture" id=7]
+[ext_resource path="res://Bush.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Grass.png" type="Texture" id=9]
+[ext_resource path="res://Gates.png" type="Texture" id=10]
+[ext_resource path="res://RedFountain.png" type="Texture" id=11]
+[ext_resource path="res://TheWhiteHouse.png" type="Texture" id=12]
+[ext_resource path="res://Bushes.png" type="Texture" id=13]
+[ext_resource path="res://Mcpole.png" type="Texture" id=14]
+[ext_resource path="res://ScrollbuttonPressed.png" type="Texture" id=15]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/BuyButton.png" type="Texture" id=16]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/LeftScrollButton.png" type="Texture" id=17]
+[ext_resource path="res://PixelFont.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://Store.gd" type="Script" id=19]
+[ext_resource path="res://SignPole.png" type="Texture" id=20]
+[ext_resource path="res://Sign.png" type="Texture" id=21]
+[ext_resource path="res://FastFoodEmUp-Assets/Cloud2.png" type="Texture" id=22]
+[ext_resource path="res://FastFoodEmUp-Assets/Cloud.png" type="Texture" id=23]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/EquipButton.png" type="Texture" id=24]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/BuyButtonPressed.png" type="Texture" id=25]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/EquippedButton.png" type="Texture" id=26]
+[ext_resource path="res://FastFoodEmUp-Assets/Dollar.png" type="Texture" id=27]
+[ext_resource path="res://FFFFORWA.TTF" type="DynamicFontData" id=28]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/No (1).png" type="Texture" id=29]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/NoPressed (1).png" type="Texture" id=30]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/YesPressed (1).png" type="Texture" id=31]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/Yes (1).png" type="Texture" id=32]
+[ext_resource path="res://CareerSceneFont.tres" type="DynamicFont" id=33]
+[ext_resource path="res://FastFoodEmUp-Assets/UI-Buttons/AreYouSure_Window.png" type="Texture" id=34]
+[ext_resource path="res://Shadow.png" type="Texture" id=35]
+[ext_resource path="res://IN-GAME-ACTIONS/MoneyCollectedLabel.tscn" type="PackedScene" id=36]
+[ext_resource path="res://BLACK.png" type="Texture" id=37]
+[ext_resource path="res://SOUND_EFFECTS/SFX/BUTTON_SOUND.wav" type="AudioStream" id=38]
+[ext_resource path="res://SOUND_EFFECTS/SFX/EQUIPPED_SOUND.wav" type="AudioStream" id=39]
+[ext_resource path="res://SOUND_EFFECTS/SFX/BOUGHT_SOUND.wav" type="AudioStream" id=40]
+[ext_resource path="res://SOUND_EFFECTS/MUSIC/STORE_MUSIC.mp3" type="AudioStream" id=41]
+[ext_resource path="res://SOUND_EFFECTS/SFX/VEGETABLE_CUTTING_SOUND3.wav" type="AudioStream" id=42]
+[ext_resource path="res://SKY.png" type="Texture" id=43]
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -84, -1557 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Scroll"
+length = 60.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 59.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -84, -1557 ), Vector2( -3979, -1557 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "WhiteHouseAnimation"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=11]
+
+[sub_resource type="ParticlesMaterial" id=12]
+next_pass = SubResource( 11 )
+flag_disable_z = true
+direction = Vector3( 0, -100, 0 )
+spread = 180.0
+gravity = Vector3( 0, -500, 0 )
+initial_velocity = -350.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -3.48
+radial_accel = -12.87
+radial_accel_random = 0.57
+tangential_accel = 2.25
+damping = 100.0
+angle = 720.0
+scale = 6.0
+color = Color( 0.988235, 0.556863, 0.345098, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 49
+font_data = ExtResource( 18 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "ArmyFlagAnimation"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="DynamicFont" id=13]
+size = 52
+font_data = ExtResource( 28 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 40
+font_data = ExtResource( 28 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 55
+font_data = ExtResource( 28 )
+
+[sub_resource type="Animation" id=18]
+resource_name = "POP_OUT"
+length = 0.14
+step = 0.005
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Shadow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.14 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.87451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Shadow:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.14 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.02, 0.14 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.2, 1 ), Vector2( 1.4, 1.2 ), Vector2( 0.2, 0.1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.02, 0.09 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../EquipButton:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../EquippedButton:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../BuyButton:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../Operators:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "POP_UP"
+length = 0.17
+step = 0.005
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.08, 0.12, 0.165 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.2, 0.1 ), Vector2( 1.2, 1 ), Vector2( 1.1, 0.9 ), Vector2( 1.2, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.01, 0.165 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 10, 10, 10, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Shadow:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Shadow:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.165 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.87451 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../Operators:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../BuyButton:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../EquippedButton:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../EquipButton:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.2, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Shadow:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Shadow:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../Operators:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../BuyButton:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../EquippedButton:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../EquipButton:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="DynamicFont" id=19]
+size = 70
+outline_size = 1
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 18 )
+
+[sub_resource type="Animation" id=20]
+resource_name = "POP_IN"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 1.05 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 176, 724 ), Vector2( 51, 431 ), Vector2( 51, 431 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 1.05 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.15, 1.05, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 51, 579 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "FADE_IN"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("LOADING_SCREEN/AnimationPlayer/Black:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LOADING_SCREEN/AnimationPlayer/Black:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "FADE_OUT"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("LOADING_SCREEN/AnimationPlayer/Black:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LOADING_SCREEN/AnimationPlayer/Black:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=25]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("LOADING_SCREEN/AnimationPlayer/Black:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LOADING_SCREEN/AnimationPlayer/Black:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="DynamicFont" id=26]
+size = 100
+font_data = ExtResource( 18 )
+
+[node name="Store" type="Node2D"]
+script = ExtResource( 19 )
+
+[node name="BackgroundSidewalks" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite" parent="BackgroundSidewalks"]
+position = Vector2( 2388.25, 31.9999 )
+scale = Vector2( 0.473462, 1.39219 )
+
+[node name="Sky" type="Sprite" parent="BackgroundSidewalks/Background"]
+position = Vector2( 8.97647, 314.612 )
+scale = Vector2( 8.3327, 0.430831 )
+texture = ExtResource( 43 )
+
+[node name="DowntownSkyline" type="Node2D" parent="BackgroundSidewalks/Background"]
+modulate = Color( 0.729412, 0.796078, 1, 0.117647 )
+position = Vector2( -5040, -66.9075 )
+scale = Vector2( 2.10482, 0.700602 )
+
+[node name="SkyscraperPicture" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+position = Vector2( 2431.75, 940.75 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture6" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline"]
+self_modulate = Color( 1, 1, 1, 0.4 )
+position = Vector2( 2997, 999 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture4" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline"]
+modulate = Color( 0.611765, 0.776471, 0.933333, 0.215686 )
+position = Vector2( 2369.13, 1008.88 )
+scale = Vector2( 0.245833, 1.09196 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture2" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline"]
+self_modulate = Color( 1, 1, 1, 0.603922 )
+position = Vector2( 2533.94, 957.938 )
+scale = Vector2( 0.689584, 2.77098 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture5" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+position = Vector2( 2876, 891 )
+scale = Vector2( 0.778126, 3.40692 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture3" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline"]
+self_modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 2700, 1133 )
+scale = Vector2( 0.789064, 2.45882 )
+texture = ExtResource( 7 )
+
+[node name="DowntownSkyline3" type="Node2D" parent="BackgroundSidewalks/Background"]
+modulate = Color( 0.729412, 0.796078, 1, 0.117647 )
+position = Vector2( -5040, -66.9075 )
+scale = Vector2( 2.10482, 0.700602 )
+
+[node name="SkyscraperPicture" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline3"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+position = Vector2( 2431.75, 940.75 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture6" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline3"]
+self_modulate = Color( 1, 1, 1, 0.4 )
+position = Vector2( 2997, 999 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture4" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline3"]
+modulate = Color( 0.611765, 0.776471, 0.933333, 0.215686 )
+position = Vector2( 2369.13, 1008.88 )
+scale = Vector2( 0.245833, 1.09196 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture2" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline3"]
+self_modulate = Color( 1, 1, 1, 0.603922 )
+position = Vector2( 2533.94, 957.938 )
+scale = Vector2( 0.689584, 2.77098 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture5" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline3"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+position = Vector2( 2876, 891 )
+scale = Vector2( 0.778126, 3.40692 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture3" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline3"]
+self_modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 2700, 1133 )
+scale = Vector2( 0.789064, 2.45882 )
+texture = ExtResource( 7 )
+
+[node name="DowntownSkyline2" type="Node2D" parent="BackgroundSidewalks/Background"]
+modulate = Color( 0.729412, 0.796078, 1, 0.423529 )
+position = Vector2( -9706.39, -80.9195 )
+scale = Vector2( 2.10482, 0.700602 )
+
+[node name="SkyscraperPicture" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline2"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+position = Vector2( 2431.75, 940.75 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture6" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline2"]
+self_modulate = Color( 1, 1, 1, 0.4 )
+position = Vector2( 2997, 999 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture4" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline2"]
+modulate = Color( 0.611765, 0.776471, 0.933333, 0.215686 )
+position = Vector2( 2369.13, 1008.88 )
+scale = Vector2( 0.245833, 1.09196 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture2" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline2"]
+self_modulate = Color( 1, 1, 1, 0.603922 )
+position = Vector2( 2533.94, 957.938 )
+scale = Vector2( 0.689584, 2.77098 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture5" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline2"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+position = Vector2( 2876, 891 )
+scale = Vector2( 0.778126, 3.40692 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture3" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline2"]
+self_modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 2700, 1133 )
+scale = Vector2( 0.789064, 2.45882 )
+texture = ExtResource( 7 )
+
+[node name="DowntownSkyline4" type="Node2D" parent="BackgroundSidewalks/Background"]
+modulate = Color( 0.729412, 0.796078, 1, 0.423529 )
+position = Vector2( -7037.48, -112.447 )
+scale = Vector2( 2.10482, 0.700602 )
+
+[node name="SkyscraperPicture" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline4"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+position = Vector2( 2431.75, 940.75 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture6" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline4"]
+self_modulate = Color( 1, 1, 1, 0.4 )
+position = Vector2( 2997, 999 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture4" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline4"]
+modulate = Color( 0.611765, 0.776471, 0.933333, 0.215686 )
+position = Vector2( 2369.13, 1008.88 )
+scale = Vector2( 0.245833, 1.09196 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture2" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline4"]
+self_modulate = Color( 1, 1, 1, 0.603922 )
+position = Vector2( 2533.94, 957.938 )
+scale = Vector2( 0.689584, 2.77098 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture5" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline4"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+position = Vector2( 2876, 891 )
+scale = Vector2( 0.778126, 3.40692 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture3" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline4"]
+self_modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 2700, 1133 )
+scale = Vector2( 0.789064, 2.45882 )
+texture = ExtResource( 7 )
+
+[node name="DowntownSkyline5" type="Node2D" parent="BackgroundSidewalks/Background"]
+modulate = Color( 0.729412, 0.796078, 1, 0.423529 )
+position = Vector2( -2432.12, -83.0213 )
+scale = Vector2( 2.10482, 0.700602 )
+
+[node name="SkyscraperPicture" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline5"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+position = Vector2( 2431.75, 940.75 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture6" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline5"]
+self_modulate = Color( 1, 1, 1, 0.4 )
+position = Vector2( 2997, 999 )
+scale = Vector2( 0.336111, 1.17679 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture4" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline5"]
+modulate = Color( 0.611765, 0.776471, 0.933333, 0.215686 )
+position = Vector2( 2369.13, 1008.88 )
+scale = Vector2( 0.245833, 1.09196 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture2" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline5"]
+self_modulate = Color( 1, 1, 1, 0.603922 )
+position = Vector2( 2533.94, 957.938 )
+scale = Vector2( 0.689584, 2.77098 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture5" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline5"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+position = Vector2( 2876, 891 )
+scale = Vector2( 0.778126, 3.40692 )
+texture = ExtResource( 7 )
+
+[node name="SkyscraperPicture3" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline5"]
+self_modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 2700, 1133 )
+scale = Vector2( 0.789064, 2.45882 )
+texture = ExtResource( 7 )
+
+[node name="Bushes" type="Sprite" parent="BackgroundSidewalks/Background/DowntownSkyline5"]
+position = Vector2( 1609, 919 )
+scale = Vector2( 0.4751, 1.42734 )
+texture = ExtResource( 13 )
+
+[node name="Mcpole" type="Sprite" parent="BackgroundSidewalks"]
+self_modulate = Color( 1, 1, 1, 0.384314 )
+position = Vector2( 4723, 946 )
+scale = Vector2( 1.57222, 1.98214 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="Clouds" type="Node2D" parent="BackgroundSidewalks"]
+position = Vector2( -84, -1557 )
+
+[node name="part1" type="Node2D" parent="BackgroundSidewalks/Clouds"]
+position = Vector2( 865, 1776 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Cloud2" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( -1192, -75 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( -601, -99 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud3" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 591.667, 73.3334 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud4" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 1698.33, -163.333 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud5" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 2723.33, 113.333 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud6" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 3328.33, 21.6667 )
+scale = Vector2( 7.84615, 7.76667 )
+texture = ExtResource( 23 )
+
+[node name="Cloud7" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 4508, -85 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud8" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 5734, -124 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud9" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( -1192, -75 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud10" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( -601, -99 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud11" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 591.667, 73.3334 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud12" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 1698.33, -163.333 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud13" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 2723.33, 113.333 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud14" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 3328.33, 21.6667 )
+scale = Vector2( 7.84615, 7.76667 )
+texture = ExtResource( 23 )
+
+[node name="Cloud15" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 4508, -85 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud16" type="Sprite" parent="BackgroundSidewalks/Clouds/part1"]
+position = Vector2( 5734, -124 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="part2" type="Node2D" parent="BackgroundSidewalks/Clouds"]
+position = Vector2( 4760, 1776 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Cloud2" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( -1192, -75 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( -601, -99 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud3" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 591.667, 73.3334 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud4" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 1698.33, -163.333 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud5" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 2723.33, 113.333 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud6" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 3328.33, 21.6667 )
+scale = Vector2( 7.84615, 7.76667 )
+texture = ExtResource( 23 )
+
+[node name="Cloud7" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 4508, -85 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud8" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 5734, -124 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud9" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( -1192, -75 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud10" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( -601, -99 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud11" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 591.667, 73.3334 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud12" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 1698.33, -163.333 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="Cloud13" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 2723.33, 113.333 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud14" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 3328.33, 21.6667 )
+scale = Vector2( 7.84615, 7.76667 )
+texture = ExtResource( 23 )
+
+[node name="Cloud15" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 4508, -85 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 22 )
+
+[node name="Cloud16" type="Sprite" parent="BackgroundSidewalks/Clouds/part2"]
+position = Vector2( 5734, -124 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 23 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BackgroundSidewalks/Clouds"]
+autoplay = "Scroll"
+anims/RESET = SubResource( 7 )
+anims/Scroll = SubResource( 8 )
+
+[node name="Grass" type="Sprite" parent="BackgroundSidewalks"]
+position = Vector2( 597, 945.5 )
+scale = Vector2( 6.82222, 4.86 )
+texture = ExtResource( 9 )
+
+[node name="Grass2" type="Sprite" parent="BackgroundSidewalks/Grass"]
+position = Vector2( 179.5, 0 )
+texture = ExtResource( 9 )
+
+[node name="Grass3" type="Sprite" parent="BackgroundSidewalks/Grass"]
+position = Vector2( 352, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="Grass2" type="Sprite" parent="BackgroundSidewalks/Grass/Grass3"]
+position = Vector2( 179.5, 0 )
+texture = ExtResource( 9 )
+
+[node name="TheWhiteHouse" type="Sprite" parent="BackgroundSidewalks"]
+self_modulate = Color( 1, 1, 1, 0.635294 )
+position = Vector2( 2600, 754 )
+scale = Vector2( 1.2625, 1.32596 )
+texture = ExtResource( 12 )
+hframes = 4
+
+[node name="Bushes" type="Sprite" parent="BackgroundSidewalks/TheWhiteHouse"]
+position = Vector2( -60.1979, 84.1842 )
+scale = Vector2( 1.35974, 0.814503 )
+texture = ExtResource( 13 )
+
+[node name="Bushes2" type="Sprite" parent="BackgroundSidewalks/TheWhiteHouse"]
+position = Vector2( 84.7526, 84.9384 )
+scale = Vector2( 1.35974, 0.814503 )
+texture = ExtResource( 13 )
+
+[node name="RedFountain" type="Sprite" parent="BackgroundSidewalks/TheWhiteHouse"]
+position = Vector2( -17.4258, 68.3467 )
+scale = Vector2( 1.60419, 1.26701 )
+texture = ExtResource( 11 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BackgroundSidewalks/TheWhiteHouse"]
+autoplay = "WhiteHouseAnimation"
+anims/RESET = SubResource( 3 )
+anims/WhiteHouseAnimation = SubResource( 4 )
+
+[node name="Sidewalk" type="Node2D" parent="BackgroundSidewalks"]
+position = Vector2( 0, 376 )
+
+[node name="SidewalkPicture" type="Sprite" parent="BackgroundSidewalks/Sidewalk"]
+position = Vector2( 360, 344 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SidewalkPicture2" type="Sprite" parent="BackgroundSidewalks/Sidewalk"]
+position = Vector2( 1080, 344 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SidewalkPicture3" type="Sprite" parent="BackgroundSidewalks/Sidewalk"]
+position = Vector2( 1800, 344 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SidewalkPicture4" type="Sprite" parent="BackgroundSidewalks/Sidewalk"]
+position = Vector2( 2520, 344 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+
+[node name="SidewalkPicture5" type="Sprite" parent="BackgroundSidewalks/Sidewalk/SidewalkPicture4"]
+position = Vector2( 180, 0 )
+texture = ExtResource( 2 )
+
+[node name="Grass" type="Sprite" parent="BackgroundSidewalks/Sidewalk/SidewalkPicture4"]
+position = Vector2( 75.7812, 69.625 )
+scale = Vector2( 1.67465, 0.715 )
+texture = ExtResource( 9 )
+
+[node name="Cliff" type="Sprite" parent="BackgroundSidewalks/Sidewalk"]
+position = Vector2( 4194, 344 )
+scale = Vector2( 6.6, 4 )
+texture = ExtResource( 5 )
+
+[node name="Particles2D" type="Particles2D" parent="BackgroundSidewalks/Sidewalk/Cliff"]
+modulate = Color( 1, 1, 1, 0.52549 )
+position = Vector2( 18.3333, 156.25 )
+rotation = -0.230546
+scale = Vector2( 0.154082, 0.248426 )
+amount = 160
+speed_scale = 0.25
+fixed_fps = 30
+local_coords = false
+process_material = SubResource( 12 )
+
+[node name="Restaraunts" type="Node2D" parent="BackgroundSidewalks"]
+
+[node name="FoodTruck" type="Sprite" parent="BackgroundSidewalks/Restaraunts"]
+position = Vector2( 339, 803.25 )
+scale = Vector2( 3.43889, 3.06072 )
+texture = ExtResource( 6 )
+
+[node name="Bush4" parent="BackgroundSidewalks/Restaraunts/FoodTruck" instance=ExtResource( 8 )]
+position = Vector2( -112.536, 45.0058 )
+scale = Vector2( 0.336671, 0.366654 )
+
+[node name="BurgerTownSign" type="Node2D" parent="BackgroundSidewalks/Restaraunts/FoodTruck"]
+position = Vector2( -102.649, -152.66 )
+scale = Vector2( 0.261712, 0.261376 )
+
+[node name="SignPole" type="Sprite" parent="BackgroundSidewalks/Restaraunts/FoodTruck/BurgerTownSign"]
+position = Vector2( 32, 802 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole2" type="Sprite" parent="BackgroundSidewalks/Restaraunts/FoodTruck/BurgerTownSign"]
+position = Vector2( 32, 653 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole3" type="Sprite" parent="BackgroundSidewalks/Restaraunts/FoodTruck/BurgerTownSign"]
+position = Vector2( 32, 501 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole5" type="Sprite" parent="BackgroundSidewalks/Restaraunts/FoodTruck/BurgerTownSign"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole6" type="Sprite" parent="BackgroundSidewalks/Restaraunts/FoodTruck/BurgerTownSign"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="Sign" type="Sprite" parent="BackgroundSidewalks/Restaraunts/FoodTruck/BurgerTownSign"]
+position = Vector2( 251.875, 343 )
+scale = Vector2( 3.36481, 1.875 )
+texture = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="BackgroundSidewalks/Restaraunts/FoodTruck/BurgerTownSign"]
+margin_left = 71.1097
+margin_top = 303.75
+margin_right = 525.11
+margin_bottom = 386.75
+custom_fonts/font = SubResource( 2 )
+text = "Burger Town"
+
+[node name="Idle" type="Sprite" parent="BackgroundSidewalks/Restaraunts"]
+position = Vector2( 1090, 633 )
+scale = Vector2( 4.03333, 3.78889 )
+texture = ExtResource( 3 )
+hframes = 9
+
+[node name="BurgerTownSign2" type="Node2D" parent="BackgroundSidewalks/Restaraunts/Idle"]
+position = Vector2( -86, -79.5 )
+scale = Vector2( 0.225, 0.2 )
+
+[node name="SignPole" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign2"]
+position = Vector2( 32, 802 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole2" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign2"]
+position = Vector2( 32, 653 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole3" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign2"]
+position = Vector2( 32, 501 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole5" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign2"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole6" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign2"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="Sign" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign2"]
+position = Vector2( 251.875, 343 )
+scale = Vector2( 3.36481, 1.875 )
+texture = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign2"]
+margin_left = 58.0
+margin_top = 299.0
+margin_right = 478.0
+margin_bottom = 374.0
+custom_fonts/font = SubResource( 2 )
+text = "U.S. Army base"
+
+[node name="WhiteHouseSign" type="Node2D" parent="BackgroundSidewalks/Restaraunts/Idle"]
+position = Vector2( 286.75, -107 )
+scale = Vector2( 0.225, 0.2 )
+
+[node name="SignPole" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign"]
+position = Vector2( 32, 802 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole2" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign"]
+position = Vector2( 32, 653 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole3" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign"]
+position = Vector2( 32, 501 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole5" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole6" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="Sign" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign"]
+position = Vector2( 251.875, 343 )
+scale = Vector2( 3.36481, 1.875 )
+texture = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign"]
+margin_left = 58.0
+margin_top = 299.0
+margin_right = 478.0
+margin_bottom = 374.0
+custom_fonts/font = SubResource( 2 )
+text = "The White House"
+
+[node name="WhiteHouseSign2" type="Node2D" parent="BackgroundSidewalks/Restaraunts/Idle"]
+position = Vector2( 757.25, -72.75 )
+rotation = 0.324016
+scale = Vector2( 0.225, 0.2 )
+
+[node name="SignPole" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign2"]
+position = Vector2( 32, 802 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole2" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign2"]
+position = Vector2( 32, 653 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole3" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign2"]
+position = Vector2( 32, 501 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole5" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign2"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole6" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign2"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="Sign" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign2"]
+position = Vector2( 251.875, 343 )
+scale = Vector2( 3.36481, 1.875 )
+texture = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="BackgroundSidewalks/Restaraunts/Idle/WhiteHouseSign2"]
+margin_left = 58.0
+margin_top = 299.0
+margin_right = 478.0
+margin_bottom = 374.0
+custom_fonts/font = SubResource( 2 )
+text = " i n ff  er no
+"
+
+[node name="BurgerTownSign3" type="Node2D" parent="BackgroundSidewalks/Restaraunts/Idle"]
+position = Vector2( 99.5, -105.5 )
+scale = Vector2( 0.225, 0.2 )
+
+[node name="SignPole" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign3"]
+position = Vector2( 32, 802 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole2" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign3"]
+position = Vector2( 32, 653 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole3" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign3"]
+position = Vector2( 32, 501 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole5" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign3"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="SignPole6" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign3"]
+position = Vector2( 32, 349 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+
+[node name="Sign" type="Sprite" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign3"]
+position = Vector2( 251.875, 343 )
+scale = Vector2( 3.36481, 1.875 )
+texture = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="BackgroundSidewalks/Restaraunts/Idle/BurgerTownSign3"]
+margin_left = 72.2223
+margin_top = 302.5
+margin_right = 526.222
+margin_bottom = 385.5
+custom_fonts/font = SubResource( 2 )
+text = "Retro Diner"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BackgroundSidewalks/Restaraunts/Idle"]
+autoplay = "ArmyFlagAnimation"
+anims/ArmyFlagAnimation = SubResource( 5 )
+anims/RESET = SubResource( 6 )
+
+[node name="Diner" type="Sprite" parent="BackgroundSidewalks/Restaraunts"]
+position = Vector2( 1786, 821 )
+scale = Vector2( 2.89444, 2.80556 )
+texture = ExtResource( 4 )
+
+[node name="Bush" parent="BackgroundSidewalks/Restaraunts/Diner" instance=ExtResource( 8 )]
+position = Vector2( -107.793, 44.5544 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Bush3" parent="BackgroundSidewalks/Restaraunts/Diner" instance=ExtResource( 8 )]
+position = Vector2( -361.383, 42.4158 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Bush2" parent="BackgroundSidewalks/Restaraunts/Diner" instance=ExtResource( 8 )]
+modulate = Color( 0.811765, 0.811765, 0.811765, 1 )
+position = Vector2( 91.5549, 44.5544 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Gates" type="Sprite" parent="BackgroundSidewalks/Restaraunts"]
+position = Vector2( 2779, 804 )
+scale = Vector2( 7.24444, 4.74 )
+texture = ExtResource( 10 )
+
+[node name="Bush" parent="BackgroundSidewalks/Restaraunts" instance=ExtResource( 8 )]
+position = Vector2( 2223, 930 )
+scale = Vector2( 1.3, 1.5 )
+
+[node name="Bush2" parent="BackgroundSidewalks/Restaraunts" instance=ExtResource( 8 )]
+position = Vector2( 3335, 930 )
+scale = Vector2( 1.3, 1.5 )
+
+[node name="Bush3" parent="BackgroundSidewalks/Restaraunts" instance=ExtResource( 8 )]
+position = Vector2( 3083, 932 )
+scale = Vector2( 1.3, 1.5 )
+
+[node name="Bush4" parent="BackgroundSidewalks/Restaraunts" instance=ExtResource( 8 )]
+position = Vector2( 2907, 934 )
+scale = Vector2( 1.3, 1.5 )
+
+[node name="Operators" type="Node2D" parent="."]
+position = Vector2( 0, 49 )
+
+[node name="LeftScrollButton" type="TextureButton" parent="Operators"]
+margin_left = 69.0
+margin_top = 1026.0
+margin_right = 189.0
+margin_bottom = 1159.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+
+[node name="RightScrollButton" type="TextureButton" parent="Operators"]
+margin_left = 505.0
+margin_top = 1026.0
+margin_right = 625.0
+margin_bottom = 1159.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+flip_h = true
+
+[node name="SCROLL_BUTTONS_PLAYER" type="AudioStreamPlayer" parent="Operators"]
+stream = ExtResource( 42 )
+volume_db = 10.0
+pitch_scale = 0.95
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2( 113, 157 )
+scale = Vector2( 0.65, 1.1 )
+
+[node name="BuyButton" type="TextureButton" parent="Buttons"]
+margin_left = 137.0
+margin_top = 834.0
+margin_right = 585.0
+margin_bottom = 953.0
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 25 )
+
+[node name="DollarSign" type="Sprite" parent="Buttons/BuyButton"]
+position = Vector2( 53.6875, 60 )
+scale = Vector2( 4.29166, 4.46667 )
+texture = ExtResource( 27 )
+
+[node name="PriceLabel" type="Label" parent="Buttons/BuyButton"]
+modulate = Color( 0.384314, 0.709804, 0.2, 1 )
+margin_left = 69.0
+margin_top = 30.0
+margin_right = 407.0
+margin_bottom = 93.0
+custom_fonts/font = SubResource( 13 )
+align = 1
+
+[node name="EquippedButton" type="TextureButton" parent="Buttons"]
+margin_left = 137.0
+margin_top = 834.0
+margin_right = 585.0
+margin_bottom = 953.0
+texture_normal = ExtResource( 26 )
+
+[node name="Label" type="Label" parent="Buttons/EquippedButton"]
+modulate = Color( 0.00784314, 0.00784314, 0.00784314, 1 )
+margin_left = 98.0
+margin_top = 36.0
+margin_right = 452.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 14 )
+text = "EQUIPPED"
+
+[node name="EquipButton" type="TextureButton" parent="Buttons"]
+self_modulate = Color( 0.396078, 0.909804, 0.109804, 1 )
+margin_left = 137.0
+margin_top = 834.0
+margin_right = 585.0
+margin_bottom = 953.0
+texture_normal = ExtResource( 24 )
+
+[node name="EquipLabel" type="Label" parent="Buttons/EquipButton"]
+margin_left = 128.0
+margin_top = 28.0
+margin_right = 474.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 15 )
+text = "EQUIP"
+
+[node name="Shadow" type="Sprite" parent="Buttons"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 387.255, 430.586 )
+rotation = -3.14159
+scale = Vector2( 5.93367, 12.3519 )
+texture = ExtResource( 35 )
+
+[node name="AreYouSureWindow" type="Sprite" parent="Buttons"]
+visible = false
+position = Vector2( 402.462, 485.455 )
+scale = Vector2( 1.2, 1 )
+texture = ExtResource( 34 )
+
+[node name="No" type="TextureButton" parent="Buttons/AreYouSureWindow"]
+margin_left = 26.0
+margin_top = 76.0
+margin_right = 314.0
+margin_bottom = 246.0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 30 )
+
+[node name="Label" type="Label" parent="Buttons/AreYouSureWindow/No"]
+margin_left = 112.0
+margin_top = 49.0
+margin_right = 352.0
+margin_bottom = 162.0
+custom_fonts/font = ExtResource( 33 )
+text = "NO"
+
+[node name="AreUsureLabel" type="Label" parent="Buttons/AreYouSureWindow"]
+margin_left = -371.0
+margin_top = -185.0
+margin_right = 391.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 33 )
+text = "Are you sure
+black people matter ?"
+align = 1
+
+[node name="Yes" type="TextureButton" parent="Buttons/AreYouSureWindow"]
+margin_left = -315.0
+margin_top = 76.0
+margin_right = -27.0
+margin_bottom = 246.0
+texture_normal = ExtResource( 32 )
+texture_pressed = ExtResource( 31 )
+
+[node name="Label" type="Label" parent="Buttons/AreYouSureWindow/Yes"]
+margin_left = 33.0
+margin_top = 49.0
+margin_right = 270.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 33 )
+text = "YES
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/AreYouSureWindow"]
+anims/POP_OUT = SubResource( 18 )
+anims/POP_UP = SubResource( 16 )
+anims/RESET = SubResource( 17 )
+
+[node name="NOT_ENOUGH_MONEY" type="Label" parent="Buttons"]
+modulate = Color( 1, 0, 0, 0 )
+self_modulate = Color( 2, 2, 2, 1 )
+margin_left = 51.0
+margin_top = 579.0
+margin_right = 675.0
+margin_bottom = 659.0
+custom_fonts/font = SubResource( 19 )
+text = "NOT ENOUGH MONEY"
+align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/NOT_ENOUGH_MONEY"]
+anims/POP_IN = SubResource( 20 )
+anims/RESET = SubResource( 21 )
+
+[node name="EQUIP_SOUND_PLAYER" type="AudioStreamPlayer" parent="Buttons"]
+stream = ExtResource( 39 )
+
+[node name="BOUGHT_SOUND_PLAYER" type="AudioStreamPlayer" parent="Buttons"]
+stream = ExtResource( 40 )
+
+[node name="CloseButton" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="MoneyCollectedLabel" parent="." instance=ExtResource( 36 )]
+
+[node name="LOADING_SCREEN" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LOADING_SCREEN"]
+root_node = NodePath("../..")
+autoplay = "FADE_IN"
+anims/FADE_IN = SubResource( 23 )
+anims/FADE_OUT = SubResource( 24 )
+anims/RESET = SubResource( 25 )
+
+[node name="Black" type="Sprite" parent="LOADING_SCREEN/AnimationPlayer"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 359, 622 )
+scale = Vector2( 1.85492, 2.40276 )
+texture = ExtResource( 37 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+margin_left = 576.0
+margin_top = 18.0
+margin_right = 703.0
+margin_bottom = 135.0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 30 )
+expand = true
+
+[node name="Label" type="Label" parent="TextureButton"]
+margin_left = 38.0
+margin_top = 4.0
+margin_right = 106.0
+margin_bottom = 140.0
+custom_fonts/font = SubResource( 26 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BUTTON_SOUND_PLAYER" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 38 )
+
+[node name="AMBIENT_PLAYER" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 41 )
+volume_db = -5.0
+autoplay = true
+
+[connection signal="pressed" from="Operators/LeftScrollButton" to="." method="_on_LeftScrollButton_pressed"]
+[connection signal="pressed" from="Operators/RightScrollButton" to="." method="_on_RightScrollButton_pressed"]
+[connection signal="pressed" from="Buttons/BuyButton" to="." method="_on_BuyButton_pressed"]
+[connection signal="pressed" from="Buttons/EquippedButton" to="." method="_on_EquippedButton_pressed"]
+[connection signal="pressed" from="Buttons/EquipButton" to="." method="_on_EquipButton_pressed"]
+[connection signal="pressed" from="Buttons/AreYouSureWindow/No" to="." method="_on_No_pressed"]
+[connection signal="pressed" from="Buttons/AreYouSureWindow/Yes" to="." method="_on_Yes_pressed"]
+[connection signal="animation_finished" from="LOADING_SCREEN/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

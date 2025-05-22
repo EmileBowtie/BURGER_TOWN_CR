@@ -1,0 +1,197 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/CHEESE_BUTTON_PRESSED.png" type="Texture" id=1]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/PATTY_BUTTON_PRESSED.png" type="Texture" id=2]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/PATTY_BUTTON.png" type="Texture" id=3]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/PICKLE_BUTTON.png" type="Texture" id=4]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/ONION_BUTTON.png" type="Texture" id=5]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/BUN_BUTTON_PRESSED.png" type="Texture" id=6]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/ONION_BUTTON_PRESSED.png" type="Texture" id=7]
+[ext_resource path="res://IN-GAME-ACTIONS/Buttons.gd" type="Script" id=8]
+[ext_resource path="res://IN-GAME-BACKGROUNDS/CashRegister.tscn" type="PackedScene" id=9]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/TOMATO_BUTTON.png" type="Texture" id=10]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/CHEESE_BUTTON.png" type="Texture" id=11]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/BUN_BUTTON.png" type="Texture" id=12]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/TOMATO_BUTTON_PRESSED.png" type="Texture" id=13]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/NewButtons/PICKLE_BUTTON_PRESSED.png" type="Texture" id=14]
+[ext_resource path="res://SOUND_EFFECTS/SFX/PATTY_SOUND.wav" type="AudioStream" id=15]
+
+[sub_resource type="Animation" id=1]
+resource_name = "BunButton-Pressed"
+length = 0.1
+
+[sub_resource type="Animation" id=4]
+resource_name = "POP"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Buttons:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Buttons:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -37, -131 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Buttons:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 6, 6, 6, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Buttons:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Buttons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Buttons:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Buttons" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+
+[node name="CashRegister" parent="." instance=ExtResource( 9 )]
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="BunButton" type="TextureButton" parent="Buttons"]
+margin_left = 60.0
+margin_top = 1080.0
+margin_right = 240.0
+margin_bottom = 1170.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 6 )
+expand = true
+
+[node name="PattyButton" type="TextureButton" parent="Buttons"]
+margin_left = 270.0
+margin_top = 1080.0
+margin_right = 450.0
+margin_bottom = 1170.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="PATTY_AUDIO" type="AudioStreamPlayer" parent="Buttons/PattyButton"]
+stream = ExtResource( 15 )
+
+[node name="CheeseButton" type="TextureButton" parent="Buttons"]
+margin_left = 480.0
+margin_top = 1080.0
+margin_right = 660.001
+margin_bottom = 1170.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 1 )
+expand = true
+
+[node name="PickleButton" type="TextureButton" parent="Buttons"]
+margin_left = 60.0
+margin_top = 1190.0
+margin_right = 240.0
+margin_bottom = 1280.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 14 )
+expand = true
+
+[node name="TomatoButton" type="TextureButton" parent="Buttons"]
+margin_left = 270.0
+margin_top = 1190.0
+margin_right = 450.0
+margin_bottom = 1280.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="OnionButton" type="TextureButton" parent="Buttons"]
+margin_left = 480.0
+margin_top = 1190.0
+margin_right = 660.001
+margin_bottom = 1280.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/BunButton-Pressed = SubResource( 1 )
+
+[node name="SwitchAnimation" type="AnimationPlayer" parent="."]
+anims/POP = SubResource( 4 )
+anims/RESET = SubResource( 3 )
+
+[node name="VEGGIE_AUDIO" type="AudioStreamPlayer" parent="."]
+
+[node name="BUN_AUDIO" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="Buttons/BunButton" to="." method="_on_BunButton_pressed"]
+[connection signal="pressed" from="Buttons/PattyButton" to="." method="_on_PattyButton_pressed"]
+[connection signal="pressed" from="Buttons/CheeseButton" to="." method="_on_CheeseButton_pressed"]
+[connection signal="pressed" from="Buttons/PickleButton" to="." method="_on_PickleButton_pressed"]
+[connection signal="pressed" from="Buttons/TomatoButton" to="." method="_on_TomatoButton_pressed"]
+[connection signal="pressed" from="Buttons/OnionButton" to="." method="_on_OnionButton_pressed"]

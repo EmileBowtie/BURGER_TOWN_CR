@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://FastFoodEmUp-Assets/Dollar.png" type="Texture" id=2]
+[ext_resource path="res://FFFFORWA.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://IN-GAME-ACTIONS/MoneyCollectedLabel.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 4
+outline_color = Color( 1, 0.235294, 0.133333, 1 )
+font_data = ExtResource( 3 )
+
+[node name="MoneyCollectedLabel" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 40, 55 )
+scale = Vector2( 5.65278, 6.225 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+self_modulate = Color( 0.517647, 0.929412, 0.0941176, 1 )
+margin_left = 83.0
+margin_top = 35.0
+margin_right = 450.0
+margin_bottom = 67.0
+custom_colors/font_color = Color( 0.968627, 0.929412, 0.156863, 1 )
+custom_fonts/font = SubResource( 1 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/INFERNO_MUSIC.mp3-73414d36c6488d538fd40647caad6954.mp3str"
+
+[deps]
+
+source_file="res://SOUND_EFFECTS/MUSIC/INFERNO_MUSIC.mp3"
+dest_files=[ "res://.import/INFERNO_MUSIC.mp3-73414d36c6488d538fd40647caad6954.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

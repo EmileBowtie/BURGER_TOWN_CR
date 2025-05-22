@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/3X_UPGRADE_SOUND.wav-0a8c7610512b23b43edbb2d1f02d1af6.sample"
+
+[deps]
+
+source_file="res://SOUND_EFFECTS/SFX/3X_UPGRADE_SOUND.wav"
+dest_files=[ "res://.import/3X_UPGRADE_SOUND.wav-0a8c7610512b23b43edbb2d1f02d1af6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

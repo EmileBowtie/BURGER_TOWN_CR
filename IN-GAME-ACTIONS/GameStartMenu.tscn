@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://FFFFORWA.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Screenshot_1.png" type="Texture" id=2]
+[ext_resource path="res://FastFoodEmUp-Assets/BurgerTownLogo.png" type="Texture" id=3]
+[ext_resource path="res://IN-GAME-ACTIONS/GameStartMenu.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 7
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "TapToStart-Default"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[node name="GameStartMenu" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+self_modulate = Color( 1, 1, 1, 0.027451 )
+position = Vector2( -3, -14 )
+scale = Vector2( 1, 0.810156 )
+normal = ExtResource( 2 )
+action = "game_start"
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 0.839216, 0.168627, 1 )
+margin_left = 124.0
+margin_top = 868.0
+margin_right = 602.0
+margin_bottom = 938.0
+custom_fonts/font = SubResource( 1 )
+text = "TAP TO START"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "TapToStart-Default"
+anims/RESET = SubResource( 3 )
+anims/TapToStart-Default = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 360, 297 )
+texture = ExtResource( 3 )
